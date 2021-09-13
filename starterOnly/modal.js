@@ -29,3 +29,29 @@ function crossClose() {
 }
 
 
+// Form validation
+
+    // Retrieve nodes for validation
+
+      // firstname
+const firstName = document.querySelector('#first');
+const prenomDiv = document.querySelector('#div-prenom');
+      // lastname
+const lastName = document.querySelector('#last');
+const nomDiv = document.querySelector('#div-nom');
+      //email
+const email = document.querySelector('#email');
+const emailDiv = document.querySelector('#div-email');
+      // birthdate 
+const birthDate = document.querySelector('#birthdate');
+const birthDateDiv = document.querySelector('#birthdate-div');
+      // nbre of tournaments
+const tournamentNr = document.querySelector('#quantity');
+const tournamentDiv = document.querySelector('#tournament-div');
+      // cities
+const radios = document.getElementsByName('location');
+const checkboxDiv = document.querySelector('#checkbox-div');
+      // terms of use
+const checkbox1Div = document.querySelector('#checkbox1-div');
+const checkbox1 = document.querySelector("#checkbox1");
+
