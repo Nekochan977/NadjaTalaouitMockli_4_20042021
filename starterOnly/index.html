@@ -55,14 +55,14 @@
       <div class="bground">
         <div class="content">
           <span class="close"></span>
-          <div class="modal-body">
+          <div id="modal-div" class="modal-body">
             <form
               name="reserve"
               action="index.html"
-              method="get"
-              onsubmit="return validate();"
+              method="post"
             >
               <div
+                id="div-prenom"
                 class="formData">
                 <label>Prénom</label><br>
                 <input
@@ -70,10 +70,10 @@
                   type="text"
                   id="first"
                   name="first"
-                  minlength="2"
                 /><br>
               </div>
               <div
+                id="div-nom"
                 class="formData">
                 <label>Nom</label><br>
                 <input
@@ -84,6 +84,7 @@
                 /><br>
               </div>
               <div
+                id="div-email"
                 class="formData">
                 <label>E-mail</label><br>
                 <input
@@ -94,6 +95,7 @@
                 /><br>
               </div>
               <div
+                id="birthdate-div"
                 class="formData">
                 <label>Date de naissance</label><br>
                 <input
@@ -104,12 +106,14 @@
                 /><br>
               </div>
               <div
+                id="tournament-div"
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
               <p class="text-label">Quelles villes ?</p>
               <div
+                id="checkbox-div"
                 class="formData">
                 <input
                   class="checkbox-input"
@@ -180,6 +184,7 @@
               </div>
 
               <div
+                id="checkbox1-div"
                 class="formData">
                 <input
                   class="checkbox-input"
@@ -195,7 +200,7 @@
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
-                  Je Je souhaite être prévenu des prochains évènements.
+                  Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br>
               </div>
