@@ -7,6 +7,8 @@ function editNav() {
   }
 }
 
+document.querySelector(".icon").addEventListener('click', editNav)
+
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
@@ -58,7 +60,7 @@ const checkbox1 = document.querySelector("#checkbox1");
 
    // Manage form submission
 
-   document.querySelector('form').addEventListener('submit', (e)=>{
+   document.querySelector('form').addEventListener('submit', e =>{
     e.preventDefault();
 
     //add a counter to check each form input
@@ -109,7 +111,6 @@ const checkbox1 = document.querySelector("#checkbox1");
   
         // check date
   
-        console.log(birthDate.value);
         if (birthDate.value ===""){
           birthDateDiv.setAttribute('data-error', 'merci de donner une date valide');
           birthDateDiv.setAttribute('data-error-visible', 'true');
@@ -167,9 +168,14 @@ const checkbox1 = document.querySelector("#checkbox1");
           successDiv.style.display = "none";
         }
 
+        const validate = () => {
+          document.querySelector(".subscribe").reset();
+        }
+
         if(counter===7) {
           bgrounDiv.style.display = "none";
           successDiv.style.display= "block";
+          validate()
         }
        
   })
