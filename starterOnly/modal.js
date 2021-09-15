@@ -60,6 +60,9 @@ const checkbox1 = document.querySelector("#checkbox1");
 
    document.querySelector('form').addEventListener('submit', (e)=>{
     e.preventDefault();
+
+    //add a counter to check each form input
+    let counter = 0;
   
       // Validation conditions
   
@@ -82,6 +85,7 @@ const checkbox1 = document.querySelector("#checkbox1");
         prenomDiv.setAttribute('data-error-visible', 'true');
       } else {
         prenomDiv.setAttribute('data-error-visible', 'false');
+        counter++;
       }
   
          // check lastname
@@ -91,11 +95,13 @@ const checkbox1 = document.querySelector("#checkbox1");
         nomDiv.setAttribute('data-error-visible', 'true');
       } else {
         nomDiv.setAttribute('data-error-visible', 'false');
+        counter++;
       }
         // check email
   
       if (mailFormat.test(email.value)){
         emailDiv.setAttribute('data-error-visible', 'false');
+        counter++;
       } else {
         emailDiv.setAttribute('data-error', 'merci de donner une adresse mail valide');
         emailDiv.setAttribute('data-error-visible', 'true');
@@ -109,12 +115,14 @@ const checkbox1 = document.querySelector("#checkbox1");
           birthDateDiv.setAttribute('data-error-visible', 'true');
         } else {
           birthDateDiv.setAttribute('data-error-visible', 'false');
+          counter++;
         }
   
         // check number of tournaments
   
         if (tournamentNrFormat.test(tournamentNr.value)){
           tournamentDiv.setAttribute('data-error-visible', 'false');
+          counter++;
         } else {
           tournamentDiv.setAttribute('data-error', 'merci de donner un nombre entre 0 et 99');
           tournamentDiv.setAttribute('data-error-visible', 'true');
@@ -129,6 +137,7 @@ const checkbox1 = document.querySelector("#checkbox1");
           if(radios[i].checked) {
             radioValid = true;
             checkboxDiv.setAttribute('data-error-visible', 'false');
+            counter++;
             break;
           } 
         } if(!radioValid) {
@@ -143,6 +152,24 @@ const checkbox1 = document.querySelector("#checkbox1");
           checkbox1Div.setAttribute('data-error-visible', 'true');
         } else {
           checkbox1Div.setAttribute('data-error-visible', 'false');
+          counter++;
+        }
+
+        // form is valid - give success message
+
+        const bgrounDiv = document.querySelector(".bground");
+        const successDiv = document.querySelector("#success-div");
+        const closeSuccess = document.querySelector(".close-success-div")
+        // close modal form
+        closeSuccess.addEventListener('click', successCrossClose);
+
+        function successCrossClose() {
+          successDiv.style.display = "none";
+        }
+
+        if(counter===7) {
+          bgrounDiv.style.display = "none";
+          successDiv.style.display= "block";
         }
        
   })

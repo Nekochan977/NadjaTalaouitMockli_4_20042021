@@ -226,6 +226,21 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
+
+/* Success modal */
+
+#success-div {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(26, 39, 156, 0.4);
+}
+
 /* 
 input[data-error]::after {
     content: attr(data-error);
@@ -448,7 +463,7 @@ input[data-error]::after {
 }
 .btn-signup {
   outline: none;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-size: 1.3rem;
   padding: 15px 23px;
   margin: 0;
