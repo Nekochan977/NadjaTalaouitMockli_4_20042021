@@ -76,14 +76,14 @@ img {
 
 
 
- /* @media screen and (max-width: 540px) {
+ @media screen and (max-width: 540px) {
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
     margin-top: -15px;
   }
-}  */
+} 
 
 main {
   font-size: 130%;
@@ -481,7 +481,16 @@ footer {
 
 @media screen and (max-width: 414px) {
 
+  body {
+    width: 95%;
+    margin: auto;
+  }
+
   /* NAVIGATION */
+
+  .topnav {
+    padding-top: 19px;
+  }
 
   .topnav a {display: none;}
   .topnav a.icon {
@@ -489,21 +498,30 @@ footer {
     display: block;
     color: #fe142f;
   }
+  .topnav a.icon:hover{
+    color: #ffffff;
+  }
+  .topnav a.icon:active{
+    color: #ffffff;
+  }
   .topnav.responsive {
     position: relative;
   }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 15px;
+    font-size: 20px;
   }
   .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
+    font-size: 16px;
   }
-  .header-logo img {
-    height: 2.5rem;
+  .logo {
+    height: 25px;
+    margin-left: 16px;
   }
 
   /* HERO-SECTION*/
@@ -527,7 +545,7 @@ footer {
   }
   .hero-content h1 {
     font-weight: inherit;
-    width: 35.7rem;
+    width: 30.2rem;
   }
   .hero-content .btn-signup {
     display: none;
@@ -538,8 +556,8 @@ footer {
   }
   .hero-text {
     width: unset;
-    font-size: 1.5rem;
-    margin-top: 2.5rem;
+    font-size: 12px;
+    margin-top: 25px;
   }
   .hero-img {
     height: 50vh;
@@ -548,6 +566,7 @@ footer {
   .hero-img img {
     border-radius: 10px;
     margin-top: 2rem;
+    width: 30.2rem;
   }
   .hero-section > .btn-signup {
     display: block;
