@@ -2,15 +2,14 @@
   --font-default: "DM Sans", Arial, Helvetica, sans-serif;
   --font-slab: var(--font-default);
   --modal-duration: 0.8s;
+  font-size: 62.5%;
 }
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-html {
-  font-size: 62.5%;
-}
+
 /* Landing Page */
 
 body {
@@ -61,29 +60,22 @@ img {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 .topnav a.active {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 .topnav .icon {
   display: none;
 }
-
-
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-} 
 
 main {
   font-size: 130%;
@@ -305,8 +297,8 @@ input[data-error]::after {
   cursor: pointer;
   transform: scale(0.7);
 }
-.close:before,
-.close:after {
+.close::before,
+.close::after {
   position: absolute;
   left: 15px;
   content: " ";
@@ -314,10 +306,10 @@ input[data-error]::after {
   width: 3px;
   background-color: #fff;
 }
-.close:before {
+.close::before {
   transform: rotate(45deg);
 }
-.close:after {
+.close::after {
   transform: rotate(-45deg);
 }
 .btn-submit,
@@ -348,7 +340,7 @@ input[data-error]::after {
 }
 
 /* Style the arrow inside the select element: */
-.select-selected:after {
+.select-selected::after {
   position: absolute;
   content: "";
   top: 10px;
@@ -363,7 +355,7 @@ input[data-error]::after {
 }
 
 /* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
+.select-selected.select-arrow-active::after {
   transform: rotate(135deg);
   top: 13px;
 }
@@ -434,23 +426,25 @@ input[data-error]::after {
   z-index: 1;
 }
 .hero-headline {
-  font-size: 6rem;
+  font-size: 11rem;
   font-weight: normal;
   white-space: nowrap;
+  position: absolute;
+  width: 50rem;
 }
 .hero-text {
   width: 146%;
   font-weight: normal;
-  margin-top: 57px;
+  margin-top: 368px;
   padding: 0;
+  font-size: 2rem;
 }
 .btn-signup {
   outline: none;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 2.3rem;
   padding: 15px 23px;
-  margin: 0;
-  margin-top: 59px;
+  margin-top: 81px;
 }
 .hero-img {
   grid-column: span 8;
@@ -477,7 +471,7 @@ footer {
   margin: 0 20px;
 }
 
-/* MEDIQUERIES */
+/* MEDIAQUERIES */
 
 @media screen and (max-width: 414px) {
 
@@ -510,7 +504,7 @@ footer {
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
-    top: 15px;
+    top: -12px;
     font-size: 20px;
   }
   .topnav.responsive a {
@@ -518,6 +512,10 @@ footer {
     display: block;
     text-align: left;
     font-size: 16px;
+  }
+  .header-logo {
+    top: 11px;
+    position: relative;
   }
   .logo {
     height: 25px;
@@ -552,7 +550,7 @@ footer {
   }
   .hero-headline {
     font-size: 3.5rem;
-    /* white-space: normal; */
+    position: relative;
   }
   .hero-text {
     width: unset;
@@ -566,22 +564,75 @@ footer {
   .hero-img img {
     border-radius: 10px;
     margin-top: 2rem;
-    width: 30.2rem;
+    width: 33.1rem;
   }
   .hero-section > .btn-signup {
     display: block;
-    margin: 32px auto 10px;
+    margin: 36px 68px;
     padding: 12px 35px;
+    font-size: 1.5rem;
   }
   .copyrights {
     margin-top: 50px;
     text-align: center;
   }
+  .content {
+      margin-top: 75px;
+  }
+  .bground {
+    background-color: unset;
+  }
+  
 }
 
-/* @media screen and (max-width: 800px) {
+ /* @media screen and (max-width: 540px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    margin-top: -15px;
+  }
+}  */
+
+@media screen and (min-width: 415px) and (max-width: 834px) {
+  .logo {
+    height: 3rem;
+    margin-left: 15px;
+  }
+  .topnav a {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  .hero-section {
+    min-height: 71vh;
+  }
+  .hero-content {
+    padding: 51px 21px;
+  }
+  .hero-headline {
+    font-size: 7rem;
+    font-weight: normal;
+    white-space: nowrap;
+    position: absolute;
+    width: 50rem;
+  }
   
-} */
+  .hero-text {
+    width: 146%;
+    font-weight: normal;
+    margin-top: 300px;
+    padding: 0;
+    font-size: 1.5rem;  
+  }
+  .hero-img {
+    grid-column-end: span 12;
+    grid-column-start: 6;
+  }
+  .btn-signup {
+    font-size: 2rem;
+    margin-top: 128px;
+  }
+}
 
 @keyframes modalopen {
   from {
