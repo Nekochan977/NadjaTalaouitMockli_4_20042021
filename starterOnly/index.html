@@ -12,23 +12,27 @@
     />
   </head>
   <body>
+    <!-- HEADER -->
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
-      <img class="logo" alt="logo" src="Logo.png" width="auto" height="auto" />
-    </div>
-    <div class="main-navbar">
+        <img class="logo" alt="logo" src="Logo.png"/>
+      </div>
+      <!-- NAVBAR -->
+      <div class="main-navbar">
       
-      <a href="#" class="active"><span>Accueil</span></a>
-      <a href="#"><span>Détails de l'évènement</span></a>
-      <a href="#"><span>À propos</span></a>
-      <a href="#"><span>Contact</span></a>
-      <a href="#"><span>Évènements passés</span></a>
-      <a href="javascript:void(0);" class="icon" >
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-    </div>
-  </div>
+        <a href="#" class="active"><span>Accueil</span></a>
+        <a href="#"><span>Détails de l'évènement</span></a>
+        <a href="#"><span>À propos</span></a>
+        <a href="#"><span>Contact</span></a>
+        <a href="#"><span>Évènements passés</span></a>
+        <a href="javascript:void(0);" class="icon" >
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!-- END OF NAVBAR -->
+    </div> 
+    <!-- END OF HEADER -->
+    <!-- HERO SECTION -->
     <main>
       <div class="hero-section">
         <div class="hero-content">
@@ -51,7 +55,9 @@
           je m'inscris
         </button>
       </div>
+      <!-- END OF HERO SECTION -->
 
+      <!-- FORM MODAL -->
       <div class="bground">
         <div class="content">
           <span class="close"></span>
@@ -125,8 +131,7 @@
                 />
                 <label class="checkbox-label" for="location1">
                   <span class="checkbox-icon"></span>
-                  New York</label
-                >
+                  New York</label>
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -136,8 +141,7 @@
                 />
                 <label class="checkbox-label" for="location2">
                   <span class="checkbox-icon"></span>
-                  San Francisco</label
-                >
+                  San Francisco</label>
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -147,8 +151,7 @@
                 />
                 <label class="checkbox-label" for="location3">
                   <span class="checkbox-icon"></span>
-                  Seattle</label
-                >
+                  Seattle</label>
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -158,8 +161,7 @@
                 />
                 <label class="checkbox-label" for="location4">
                   <span class="checkbox-icon"></span>
-                  Chicago</label
-                >
+                  Chicago</label>
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -169,8 +171,7 @@
                 />
                 <label class="checkbox-label" for="location5">
                   <span class="checkbox-icon"></span>
-                  Boston</label
-                >
+                  Boston</label>
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -180,8 +181,7 @@
                 />
                 <label class="checkbox-label" for="location6">
                   <span class="checkbox-icon"></span>
-                  Portland</label
-                >
+                  Portland</label>
               </div>
 
               <div
@@ -193,7 +193,7 @@
                   id="checkbox1"
                   checked
                 />
-                <label class="checkbox2-label" for="checkbox1" required>
+                <label class="checkbox2-label" for="checkbox1">
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
@@ -206,25 +206,28 @@
                 <br>
               </div>
               <input
-                class="btn-submit"
+                class="btn-submit button"
                 type="submit"
-                class="button"
                 value="C'est parti"
               />
             </form>
           </div>
         </div>
       </div>
+      <!-- END OF FORM MODAL -->
+
+      <!-- SUCCESS MODAL -->
       <div id="success-div">
         <div class="content">
           <span class="close close-success-div"></span>
-          <div class="modal-body">
+          <div class="modal-body success--modalbody">
             
-            <p>Votre candidature a bien été reçue!</p>
+            <p class="success-text">Votre candidature a bien été reçue!</p>
           </div>
           
         </div>
       </div>
+      <!-- END OF SUCCESS MODAL -->
     </main>
     <footer>
       <p class="copyrights">
