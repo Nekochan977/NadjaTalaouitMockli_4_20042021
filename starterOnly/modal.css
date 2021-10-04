@@ -181,6 +181,8 @@ input {
   font-size: 20px;
   height: 48px;
 }
+/* Class error for message added by JS*/
+
 .formData[data-error]::after {
   content: attr(data-error);
   font-size: 12px;
@@ -204,6 +206,8 @@ input[data-error]::after {
     font-size: 0.4em;
     color: red;
 }
+/* End of class error for message added by JS*/
+
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -295,7 +299,7 @@ input[data-error]::after {
 }
 .btn-submit,
 .btn-signup,
- .btn-close {
+.btn-close {
   background: var(--secondary-color);
   display: block;
   margin: 0 auto;
@@ -493,6 +497,46 @@ footer {
 
 /* MEDIAQUERIES */
 
+@media screen and (min-width: 415px) and (max-width: 834px) {
+  .logo {
+    height: 3rem;
+    margin-left: 15px;
+  }
+  .topnav a {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  .hero-section {
+    min-height: 71vh;
+  }
+  .hero-content {
+    padding: 51px 21px;
+  }
+  .hero-headline {
+    font-size: 7rem;
+    font-weight: normal;
+    white-space: nowrap;
+    position: absolute;
+    width: 50rem;
+  }
+  
+  .hero-text {
+    width: 146%;
+    font-weight: normal;
+    margin-top: 300px;
+    padding: 0;
+    font-size: 1.5rem;  
+  }
+  .hero-img {
+    grid-column-end: span 12;
+    grid-column-start: 6;
+  }
+  .btn-signup {
+    font-size: 2rem;
+    margin-top: 128px;
+  }
+}
+
 @media screen and (max-width: 414px) {
 
   body {
@@ -585,7 +629,7 @@ footer {
   }
   .hero-section > .btn-signup {
     display: block;
-    margin: 36px 68px;
+    margin: 36px auto;
     padding: 12px 35px;
     font-size: 1.5rem;
   }
@@ -600,46 +644,6 @@ footer {
     background-color: unset;
   }
   
-}
-
-@media screen and (min-width: 415px) and (max-width: 834px) {
-  .logo {
-    height: 3rem;
-    margin-left: 15px;
-  }
-  .topnav a {
-    font-size: 18px;
-    margin-top: 15px;
-  }
-  .hero-section {
-    min-height: 71vh;
-  }
-  .hero-content {
-    padding: 51px 21px;
-  }
-  .hero-headline {
-    font-size: 7rem;
-    font-weight: normal;
-    white-space: nowrap;
-    position: absolute;
-    width: 50rem;
-  }
-  
-  .hero-text {
-    width: 146%;
-    font-weight: normal;
-    margin-top: 300px;
-    padding: 0;
-    font-size: 1.5rem;  
-  }
-  .hero-img {
-    grid-column-end: span 12;
-    grid-column-start: 6;
-  }
-  .btn-signup {
-    font-size: 2rem;
-    margin-top: 128px;
-  }
 }
 
 @keyframes modalopen {
