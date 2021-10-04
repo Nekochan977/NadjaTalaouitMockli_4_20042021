@@ -161,17 +161,27 @@ const checkbox1 = document.querySelector("#checkbox1");
         const bgrounDiv = document.querySelector(".bground");
         const successDiv = document.querySelector("#success-div");
         const closeSuccess = document.querySelector(".close-success-div")
-        // close modal form
+        const btnClose = document.querySelector('.btn-close');
+        // close success modal
         closeSuccess.addEventListener('click', successCrossClose);
+        btnClose.addEventListener('click', closeBtn);
 
+        // close success modal with cross
         function successCrossClose() {
           successDiv.style.display = "none";
         }
 
+        // close success modal with button
+        function closeBtn() {
+          successDiv.style.display = "none";
+        }
+        
+        // reset form 
         const validate = () => {
           document.querySelector(".subscribe").reset();
         }
 
+        // if all mandatory inputs are filled launch validate
         if(counter===7) {
           bgrounDiv.style.display = "none";
           successDiv.style.display= "block";
